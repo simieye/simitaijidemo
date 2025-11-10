@@ -1,5 +1,5 @@
 // @ts-ignore;
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 // @ts-ignore;
 import { Button, Card, CardContent, CardHeader, CardTitle, Textarea, Input, Label, Select, SelectContent, SelectItem, SelectTrigger, SelectValue, useToast } from '@/components/ui';
 // @ts-ignore;
@@ -22,22 +22,64 @@ export default function Demo(props) {
   const [uploadedFiles, setUploadedFiles] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
   const [isInitialized, setIsInitialized] = useState(false);
-  useEffect(() => {
-    // 避免无限循环，只在初始化时设置用户信息
-    if (!isInitialized && $w.auth && $w.auth.currentUser) {
-      setCurrentUser($w.auth.currentUser);
-      setIsInitialized(true);
-    }
-  }, [$w.auth.currentUser, isInitialized]);
-  const handleFileUpload = event => {
+
+  // 使用useCallback避免函数重新创建导致的无限循环
+  const handleFileUpload = useCallback(event => {
     const files = Array.from(event.target.files);
     setUploadedFiles(prev => [...prev, ...files]);
     toast({
       title: "文件上传成功",
       description: `已上传 ${files.length} 个文件`
     });
-  };
-  const handleAnalyze = async () => {
+  }, [toast]);
+  const generateVisualizationData = useCallback(() => {
+    return Array.from({
+      length: 12
+    }, (_, i) => ({
+      month: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'][i],
+      yin: Math.floor(Math.random() * 50) + 25,
+      yang: Math.floor(Math.random() * 50) + 25
+    }));
+  }, []);
+  const handleExport = useCallback(() => {
+    if (!analysisResult) return;
+    const exportData = {
+      timestamp: new Date().toISOString(),
+      input: {
+        text: inputText,
+        files: uploadedFiles.map(f => f.name)
+      },
+      result: analysisResult
+    };
+    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
+      type: 'application/json'
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `taiji-analysis-${Date.now()}.json`;
+    a.click();
+    toast({
+      title: "导出成功",
+      description: "分析结果已导出为JSON文件"
+    });
+  }, [analysisResult, inputText, uploadedFiles, toast]);
+  const handleShare = useCallback(() => {
+    if (navigator.share) {
+      navigator.share({
+        title: 'SIMIAI太极AI分析结果',
+        text: `平衡分数: ${analysisResult?.balance_score}分`,
+        url: window.location.href
+      });
+    } else {
+      navigator.clipboard.writeText(window.location.href);
+      toast({
+        title: "链接已复制",
+        description: "分析链接已复制到剪贴板"
+      });
+    }
+  }, [analysisResult, toast]);
+  const handleAnalyze = useCallback(async () => {
     if (!inputText.trim() && uploadedFiles.length === 0) {
       toast({
         title: "输入错误",
@@ -151,54 +193,14 @@ export default function Demo(props) {
         variant: "destructive"
       });
     }
-  };
-  const generateVisualizationData = () => {
-    return Array.from({
-      length: 12
-    }, (_, i) => ({
-      month: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'][i],
-      yin: Math.floor(Math.random() * 50) + 25,
-      yang: Math.floor(Math.random() * 50) + 25
-    }));
-  };
-  const handleExport = () => {
-    if (!analysisResult) return;
-    const exportData = {
-      timestamp: new Date().toISOString(),
-      input: {
-        text: inputText,
-        files: uploadedFiles.map(f => f.name)
-      },
-      result: analysisResult
-    };
-    const blob = new Blob([JSON.stringify(exportData, null, 2)], {
-      type: 'application/json'
-    });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `taiji-analysis-${Date.now()}.json`;
-    a.click();
-    toast({
-      title: "导出成功",
-      description: "分析结果已导出为JSON文件"
-    });
-  };
-  const handleShare = () => {
-    if (navigator.share) {
-      navigator.share({
-        title: 'SIMIAI太极AI分析结果',
-        text: `平衡分数: ${analysisResult?.balance_score}分`,
-        url: window.location.href
-      });
-    } else {
-      navigator.clipboard.writeText(window.location.href);
-      toast({
-        title: "链接已复制",
-        description: "分析链接已复制到剪贴板"
-      });
+  }, [inputText, uploadedFiles, analysisType, $w.auth.currentUser, $w.utils, toast, generateVisualizationData]);
+  useEffect(() => {
+    // 避免无限循环，只在初始化时设置用户信息
+    if (!isInitialized && $w.auth && $w.auth.currentUser) {
+      setCurrentUser($w.auth.currentUser);
+      setIsInitialized(true);
     }
-  };
+  }, [$w.auth.currentUser, isInitialized]);
   return <div style={style} className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <Navigation $w={$w} currentPage="demo" />
       

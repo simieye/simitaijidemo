@@ -1,5 +1,5 @@
 // @ts-ignore;
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 // @ts-ignore;
 import { Button, Card, CardContent, CardHeader, CardTitle } from '@/components/ui';
 // @ts-ignore;
@@ -14,12 +14,34 @@ export default function Home(props) {
   } = props;
   const [currentUser, setCurrentUser] = useState(null);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [isInitialized, setIsInitialized] = useState(false);
+
+  // 使用useCallback避免函数重新创建导致的无限循环
+  const handleStartDemo = useCallback(() => {
+    $w.utils.navigateTo({
+      pageId: 'demo',
+      params: {}
+    });
+  }, [$w.utils]);
+  const handleStartChat = useCallback(() => {
+    $w.utils.navigateTo({
+      pageId: 'chat',
+      params: {}
+    });
+  }, [$w.utils]);
+  const handleMouseEnter = useCallback(() => {
+    setIsAnimating(true);
+  }, []);
+  const handleMouseLeave = useCallback(() => {
+    setIsAnimating(false);
+  }, []);
   useEffect(() => {
-    // 获取当前用户信息，避免无限循环
-    if ($w.auth && $w.auth.currentUser && !currentUser) {
+    // 避免无限循环，只在初始化时设置用户信息
+    if (!isInitialized && $w.auth && $w.auth.currentUser) {
       setCurrentUser($w.auth.currentUser);
+      setIsInitialized(true);
     }
-  }, [$w.auth.currentUser, currentUser]);
+  }, [$w.auth.currentUser, isInitialized]);
   const features = [{
     icon: <Brain className="w-8 h-8" />,
     title: '智能分析',
@@ -41,18 +63,6 @@ export default function Home(props) {
     description: '与AI助手进行深度交流和探讨',
     color: 'from-orange-600 to-red-600'
   }];
-  const handleStartDemo = () => {
-    $w.utils.navigateTo({
-      pageId: 'demo',
-      params: {}
-    });
-  };
-  const handleStartChat = () => {
-    $w.utils.navigateTo({
-      pageId: 'chat',
-      params: {}
-    });
-  };
   return <div style={style} className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
       <Navigation $w={$w} currentPage="home" />
       
@@ -62,7 +72,7 @@ export default function Home(props) {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <div className="mb-8">
-              <div className={`w-32 h-32 mx-auto bg-gradient-to-br from-white to-black rounded-full flex items-center justify-center ${isAnimating ? 'animate-spin' : ''}`} onMouseEnter={() => setIsAnimating(true)} onMouseLeave={() => setIsAnimating(false)}>
+              <div className={`w-32 h-32 mx-auto bg-gradient-to-br from-white to-black rounded-full flex items-center justify-center ${isAnimating ? 'animate-spin' : ''}`} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                 <div className="w-24 h-24 bg-gradient-to-br from-black to-white rounded-full flex items-center justify-center">
                   <div className="w-12 h-12 bg-white rounded-full"></div>
                 </div>
@@ -203,14 +213,8 @@ export default function Home(props) {
             <div>
               <h3 className="font-semibold mb-4">产品</h3>
               <ul className="space-y-2 text-gray-400">
-                <li><button onClick={() => $w.utils.navigateTo({
-                  pageId: 'demo',
-                  params: {}
-                })} className="hover:text-white">AI演示</button></li>
-                <li><button onClick={() => $w.utils.navigateTo({
-                  pageId: 'chat',
-                  params: {}
-                })} className="hover:text-white">智能对话</button></li>
+                <li><button onClick={handleStartDemo} className="hover:text-white">AI演示</button></li>
+                <li><button onClick={handleStartChat} className="hover:text-white">智能对话</button></li>
                 <li><button className="hover:text-white">API文档</button></li>
               </ul>
             </div>
