@@ -1,0 +1,287 @@
+
+  [
+    {
+      "_id": "analysis_001",
+      "session_id": "session_001",
+      "user_id": "user_001",
+      "analysis_type": "taiji_balance",
+      "input_data": {
+        "query": "分析我的工作生活平衡状态",
+        "context": "最近工作压力大，经常加班，感觉身心疲惫"
+      },
+      "input_text": "最近工作压力大，经常加班，感觉身心疲惫，希望能够找到工作与生活的平衡点",
+      "input_images": [],
+      "input_files": [],
+      "yin_analysis": {
+        "score": 35,
+        "elements": ["休息不足", "情绪低落", "身体疲劳"],
+        "description": "阴性能量偏低，需要补充休息和放松",
+        "suggestions": ["增加睡眠时间", "进行冥想练习", "减少工作强度"]
+      },
+      "yang_analysis": {
+        "score": 75,
+        "elements": ["工作积极", "目标明确", "行动力强"],
+        "description": "阳性能量偏高，过度活跃",
+        "suggestions": ["适当降低工作节奏", "增加休闲活动", "培养兴趣爱好"]
+      },
+      "balance_score": 55,
+      "harmony_index": 0.65,
+      "confidence_level": 0.87,
+      "analysis_result": {
+        "overall_status": "轻微失衡",
+        "main_issue": "阳盛阴虚",
+        "balance_direction": "需要增加阴性能量",
+        "key_insights": [
+          "工作投入度过高",
+          "生活休息不足",
+          "需要调整作息规律"
+        ]
+      },
+      "recommendations": [
+        "建议每天保证7-8小时睡眠",
+        "每周安排2-3次放松活动",
+        "学习时间管理技巧",
+        "培养工作外的兴趣爱好"
+      ],
+      "visualization_data": {
+        "balance_chart": {
+          "type": "radar",
+          "data": {
+            "work": 75,
+            "rest": 35,
+            "social": 45,
+            "health": 40,
+            "spirit": 50
+          }
+        },
+        "trend_chart": {
+          "type": "line",
+          "data": [
+            {"date": "2025-11-01", "balance": 60},
+            {"date": "2025-11-05", "balance": 55},
+            {"date": "2025-11-10", "balance": 55}
+          ]
+        }
+      },
+      "chart_config": {
+        "colors": {
+          "yin": "#4A90E2",
+          "yang": "#F5A623",
+          "balance": "#7ED321"
+        },
+        "animation": true,
+        "interactive": true
+      },
+      "taiji_diagram": {
+        "yin_ratio": 0.35,
+        "yang_ratio": 0.65,
+        "rotation_angle": 45,
+        "center_point": {"x": 50, "y": 50}
+      },
+      "model_version": "taiji-v2.1.0",
+      "processing_time": 1250,
+      "analysis_status": "completed",
+      "error_message": "",
+      "tags": ["工作平衡", "压力管理", "生活调节"],
+      "category": "生活平衡",
+      "priority": 2,
+      "feedback_score": 4,
+      "is_favorite": true,
+      "share_count": 3,
+      "createdAt": 1731234567890,
+      "updatedAt": 1731234567890,
+      "createBy": "ai_system",
+      "updateBy": "user_001",
+      "owner": "user_001"
+    },
+    {
+      "_id": "analysis_002",
+      "session_id": "session_002",
+      "user_id": "user_002",
+      "analysis_type": "health_assessment",
+      "input_data": {
+        "query": "健康状态评估",
+        "symptoms": ["头痛", "失眠", "食欲不振"]
+      },
+      "input_text": "最近经常头痛，晚上失眠，食欲也不太好，想了解一下身体状况",
+      "input_images": [],
+      "input_files": [],
+      "yin_analysis": {
+        "score": 45,
+        "elements": ["睡眠质量差", "消化系统弱", "精神状态不佳"],
+        "description": "阴性能量不足，影响身体修复",
+        "suggestions": ["改善睡眠环境", "调整饮食结构", "进行温和运动"]
+      },
+      "yang_analysis": {
+        "score": 60,
+        "elements": ["仍有工作能力", "思维清晰", "日常活动正常"],
+        "description": "阳性能量尚可，但有所消耗",
+        "suggestions": ["避免过度劳累", "保持适度运动", "注意营养补充"]
+      },
+      "balance_score": 52.5,
+      "harmony_index": 0.58,
+      "confidence_level": 0.82,
+      "analysis_result": {
+        "overall_status": "亚健康状态",
+        "main_issue": "阴阳两虚",
+        "balance_direction": "需要全面调理",
+        "key_insights": [
+          "压力导致身体失衡",
+          "生活习惯需要调整",
+          "建议进行健康检查"
+        ]
+      },
+      "recommendations": [
+        "建议进行全面的身体检查",
+        "调整作息时间，早睡早起",
+        "增加营养丰富的食物摄入",
+        "尝试中医调理方法"
+      ],
+      "visualization_data": {
+        "health_chart": {
+          "type": "bar",
+          "data": {
+            "sleep": 30,
+            "appetite": 40,
+            "energy": 60,
+            "mood": 45,
+            "immunity": 55
+          }
+        },
+        "trend_chart": {
+          "type": "area",
+          "data": [
+            {"date": "2025-11-01", "health": 65},
+            {"date": "2025-11-05", "health": 58},
+            {"date": "2025-11-10", "health": 52}
+          ]
+        }
+      },
+      "chart_config": {
+        "colors": {
+          "yin": "#9B59B6",
+          "yang": "#E74C3C",
+          "balance": "#3498DB"
+        },
+        "animation": true,
+        "interactive": true
+      },
+      "taiji_diagram": {
+        "yin_ratio": 0.45,
+        "yang_ratio": 0.55,
+        "rotation_angle": 30,
+        "center_point": {"x": 50, "y": 50}
+      },
+      "model_version": "taiji-v2.1.0",
+      "processing_time": 980,
+      "analysis_status": "completed",
+      "error_message": "",
+      "tags": ["健康评估", "亚健康", "身体调理"],
+      "category": "健康分析",
+      "priority": 1,
+      "feedback_score": 5,
+      "is_favorite": false,
+      "share_count": 1,
+      "createdAt": 1731223456789,
+      "updatedAt": 1731223456789,
+      "createBy": "ai_system",
+      "updateBy": "user_002",
+      "owner": "user_002"
+    },
+    {
+      "_id": "analysis_003",
+      "session_id": "session_003",
+      "user_id": "user_003",
+      "analysis_type": "career_development",
+      "input_data": {
+        "query": "职业发展分析",
+        "current_position": "数据科学家",
+        "goals": ["技术提升", "管理转型", "创业准备"]
+      },
+      "input_text": "作为数据科学家，希望在未来3-5年内实现技术突破和管理转型，为创业做准备",
+      "input_images": [],
+      "input_files": [],
+      "yin_analysis": {
+        "score": 70,
+        "elements": ["技术基础扎实", "学习能力强", "思维深入"],
+        "description": "阴性能量充足，有很好的积累和沉淀",
+        "suggestions": ["继续深化技术专长", "加强知识体系建设", "培养战略思维"]
+      },
+      "yang_analysis": {
+        "score": 65,
+        "elements": ["执行力强", "目标明确", "行动积极"],
+        "description": "阳性能量良好，有很强的行动力",
+        "suggestions": ["扩大人际网络", "提升沟通能力", "增加实践经验"]
+      },
+      "balance_score": 67.5,
+      "harmony_index": 0.78,
+      "confidence_level": 0.91,
+      "analysis_result": {
+        "overall_status": "发展良好",
+        "main_issue": "需要平衡技术与管理",
+        "balance_direction": "阴阳协调，继续发展",
+        "key_insights": [
+          "技术与管理双轨发展",
+          "创业准备需要系统性规划",
+          "人际网络建设很重要"
+        ]
+      },
+      "recommendations": [
+        "建议制定3-5年职业规划",
+        "平衡技术深度与管理广度",
+        "积极参与行业交流和分享",
+        "寻找导师指导职业发展"
+      ],
+      "visualization_data": {
+        "career_chart": {
+          "type": "radar",
+          "data": {
+            "technical": 70,
+            "management": 45,
+            "leadership": 50,
+            "innovation": 65,
+            "communication": 55
+          }
+        },
+        "roadmap_chart": {
+          "type": "timeline",
+          "data": [
+            {"year": 2025, "goal": "技术突破"},
+            {"year": 2026, "goal": "管理转型"},
+            {"year": 2027, "goal": "创业准备"}
+          ]
+        }
+      },
+      "chart_config": {
+        "colors": {
+          "yin": "#2ECC71",
+          "yang": "#F39C12",
+          "balance": "#8E44AD"
+        },
+        "animation": true,
+        "interactive": true
+      },
+      "taiji_diagram": {
+        "yin_ratio": 0.52,
+        "yang_ratio": 0.48,
+        "rotation_angle": 15,
+        "center_point": {"x": 50, "y": 50}
+      },
+      "model_version": "taiji-v2.1.0",
+      "processing_time": 1450,
+      "analysis_status": "completed",
+      "error_message": "",
+      "tags": ["职业发展", "技术管理", "创业规划"],
+      "category": "职业分析",
+      "priority": 2,
+      "feedback_score": 5,
+      "is_favorite": true,
+      "share_count": 5,
+      "createdAt": 1731212345678,
+      "updatedAt": 1731212345678,
+      "createBy": "ai_system",
+      "updateBy": "user_003",
+      "owner": "user_003"
+    }
+  ]
+  

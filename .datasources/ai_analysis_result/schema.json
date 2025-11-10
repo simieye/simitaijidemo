@@ -1,0 +1,155 @@
+
+  {
+    "name": "ai_analysis_result",
+    "title": "AI分析结果",
+    "schemas": [
+      {
+        "name": "session_id",
+        "title": "会话ID",
+        "type": "String"
+      },
+      {
+        "name": "user_id",
+        "title": "用户ID",
+        "type": "String"
+      },
+      {
+        "name": "analysis_type",
+        "title": "分析类型",
+        "type": "String"
+      },
+      {
+        "name": "input_data",
+        "title": "输入数据",
+        "type": "Object"
+      },
+      {
+        "name": "input_text",
+        "title": "输入文本",
+        "type": "MultiLineString"
+      },
+      {
+        "name": "input_images",
+        "title": "输入图片",
+        "type": "Array",
+        "items": {
+          "type": "Image"
+        }
+      },
+      {
+        "name": "input_files",
+        "title": "输入文件",
+        "type": "Array",
+        "items": {
+          "type": "File"
+        }
+      },
+      {
+        "name": "yin_analysis",
+        "title": "阴分析结果",
+        "type": "Object"
+      },
+      {
+        "name": "yang_analysis",
+        "title": "阳分析结果",
+        "type": "Object"
+      },
+      {
+        "name": "balance_score",
+        "title": "平衡分数",
+        "type": "Number"
+      },
+      {
+        "name": "harmony_index",
+        "title": "和谐指数",
+        "type": "Number"
+      },
+      {
+        "name": "confidence_level",
+        "title": "置信度",
+        "type": "Number"
+      },
+      {
+        "name": "analysis_result",
+        "title": "分析结果",
+        "type": "Object"
+      },
+      {
+        "name": "recommendations",
+        "title": "建议",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "visualization_data",
+        "title": "可视化数据",
+        "type": "Object"
+      },
+      {
+        "name": "chart_config",
+        "title": "图表配置",
+        "type": "Object"
+      },
+      {
+        "name": "taiji_diagram",
+        "title": "太极图数据",
+        "type": "Object"
+      },
+      {
+        "name": "model_version",
+        "title": "模型版本",
+        "type": "String"
+      },
+      {
+        "name": "processing_time",
+        "title": "处理时间(毫秒)",
+        "type": "Number"
+      },
+      {
+        "name": "analysis_status",
+        "title": "分析状态",
+        "type": "String"
+      },
+      {
+        "name": "error_message",
+        "title": "错误信息",
+        "type": "String"
+      },
+      {
+        "name": "tags",
+        "title": "标签",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "category",
+        "title": "分类",
+        "type": "String"
+      },
+      {
+        "name": "priority",
+        "title": "优先级",
+        "type": "Number"
+      },
+      {
+        "name": "feedback_score",
+        "title": "用户反馈分数",
+        "type": "Number"
+      },
+      {
+        "name": "is_favorite",
+        "title": "是否收藏",
+        "type": "Boolean"
+      },
+      {
+        "name": "share_count",
+        "title": "分享次数",
+        "type": "Number"
+      }
+    ]
+  }
+  

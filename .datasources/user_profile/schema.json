@@ -1,0 +1,157 @@
+
+  {
+    "name": "user_profile",
+    "title": "用户档案",
+    "schemas": [
+      {
+        "name": "username",
+        "title": "用户名",
+        "type": "String"
+      },
+      {
+        "name": "email",
+        "title": "邮箱地址",
+        "type": "Email"
+      },
+      {
+        "name": "phone",
+        "title": "手机号码",
+        "type": "String"
+      },
+      {
+        "name": "password_hash",
+        "title": "密码哈希",
+        "type": "String"
+      },
+      {
+        "name": "nickname",
+        "title": "昵称",
+        "type": "String"
+      },
+      {
+        "name": "avatar",
+        "title": "头像",
+        "type": "Image"
+      },
+      {
+        "name": "real_name",
+        "title": "真实姓名",
+        "type": "String"
+      },
+      {
+        "name": "bio",
+        "title": "个人简介",
+        "type": "MultiLineString"
+      },
+      {
+        "name": "gender",
+        "title": "性别",
+        "type": "String"
+      },
+      {
+        "name": "birthday",
+        "title": "生日",
+        "type": "Date"
+      },
+      {
+        "name": "location",
+        "title": "所在地",
+        "type": "String"
+      },
+      {
+        "name": "website",
+        "title": "个人网站",
+        "type": "Url"
+      },
+      {
+        "name": "email_verified",
+        "title": "邮箱验证状态",
+        "type": "Boolean"
+      },
+      {
+        "name": "phone_verified",
+        "title": "手机验证状态",
+        "type": "Boolean"
+      },
+      {
+        "name": "is_active",
+        "title": "账户激活状态",
+        "type": "Boolean"
+      },
+      {
+        "name": "last_login",
+        "title": "最后登录时间",
+        "type": "DateTime"
+      },
+      {
+        "name": "login_count",
+        "title": "登录次数",
+        "type": "Number"
+      },
+      {
+        "name": "language",
+        "title": "语言偏好",
+        "type": "String"
+      },
+      {
+        "name": "timezone",
+        "title": "时区",
+        "type": "String"
+      },
+      {
+        "name": "theme",
+        "title": "主题偏好",
+        "type": "String"
+      },
+      {
+        "name": "notification_settings",
+        "title": "通知设置",
+        "type": "Object"
+      },
+      {
+        "name": "privacy_settings",
+        "title": "隐私设置",
+        "type": "Object"
+      },
+      {
+        "name": "social_links",
+        "title": "社交链接",
+        "type": "Array",
+        "items": {
+          "type": "Object"
+        }
+      },
+      {
+        "name": "skill_tags",
+        "title": "技能标签",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "interests",
+        "title": "兴趣爱好",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "user_level",
+        "title": "用户等级",
+        "type": "Number"
+      },
+      {
+        "name": "experience_points",
+        "title": "经验值",
+        "type": "Number"
+      },
+      {
+        "name": "reputation_score",
+        "title": "声誉分数",
+        "type": "Number"
+      }
+    ]
+  }
+  

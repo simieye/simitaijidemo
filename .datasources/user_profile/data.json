@@ -1,0 +1,175 @@
+
+  [
+    {
+      "_id": "user_001",
+      "username": "john_doe",
+      "email": "john.doe@example.com",
+      "phone": "+86-13800138000",
+      "password_hash": "hashed_password_123456",
+      "nickname": "John",
+      "avatar": "https://example.com/avatars/john.jpg",
+      "real_name": "张三",
+      "bio": "全栈开发工程师，热爱编程和开源项目",
+      "gender": "male",
+      "birthday": "1990-05-15",
+      "location": "北京市朝阳区",
+      "website": "https://johndoe.dev",
+      "email_verified": true,
+      "phone_verified": true,
+      "is_active": true,
+      "last_login": 1731234567890,
+      "login_count": 156,
+      "language": "zh-CN",
+      "timezone": "Asia/Shanghai",
+      "theme": "dark",
+      "notification_settings": {
+        "email_notifications": true,
+        "push_notifications": true,
+        "sms_notifications": false,
+        "marketing_emails": false
+      },
+      "privacy_settings": {
+        "profile_visibility": "public",
+        "show_email": false,
+        "show_phone": false,
+        "allow_messages": true
+      },
+      "social_links": [
+        {
+          "platform": "github",
+          "url": "https://github.com/johndoe",
+          "username": "johndoe"
+        },
+        {
+          "platform": "linkedin",
+          "url": "https://linkedin.com/in/johndoe",
+          "username": "johndoe"
+        }
+      ],
+      "skill_tags": ["JavaScript", "React", "Node.js", "Python", "Docker"],
+      "interests": ["编程", "开源", "人工智能", "区块链"],
+      "user_level": 5,
+      "experience_points": 2500,
+      "reputation_score": 85,
+      "createdAt": 1672531200000,
+      "updatedAt": 1731234567890,
+      "createBy": "system",
+      "updateBy": "john_doe",
+      "owner": "john_doe"
+    },
+    {
+      "_id": "user_002",
+      "username": "jane_smith",
+      "email": "jane.smith@example.com",
+      "phone": "+86-13900139000",
+      "password_hash": "hashed_password_789012",
+      "nickname": "Jane",
+      "avatar": "https://example.com/avatars/jane.jpg",
+      "real_name": "李四",
+      "bio": "UI/UX设计师，专注于用户体验设计和界面优化",
+      "gender": "female",
+      "birthday": "1992-08-22",
+      "location": "上海市浦东新区",
+      "website": "https://janesmith.design",
+      "email_verified": true,
+      "phone_verified": false,
+      "is_active": true,
+      "last_login": 1731223456789,
+      "login_count": 89,
+      "language": "zh-CN",
+      "timezone": "Asia/Shanghai",
+      "theme": "light",
+      "notification_settings": {
+        "email_notifications": true,
+        "push_notifications": false,
+        "sms_notifications": false,
+        "marketing_emails": true
+      },
+      "privacy_settings": {
+        "profile_visibility": "public",
+        "show_email": true,
+        "show_phone": false,
+        "allow_messages": true
+      },
+      "social_links": [
+        {
+          "platform": "dribbble",
+          "url": "https://dribbble.com/janesmith",
+          "username": "janesmith"
+        },
+        {
+          "platform": "behance",
+          "url": "https://behance.net/janesmith",
+          "username": "janesmith"
+        }
+      ],
+      "skill_tags": ["Figma", "Sketch", "Adobe XD", "Photoshop", "Illustrator"],
+      "interests": ["设计", "摄影", "旅行", "美食"],
+      "user_level": 3,
+      "experience_points": 1200,
+      "reputation_score": 72,
+      "createdAt": 1672617600000,
+      "updatedAt": 1731223456789,
+      "createBy": "system",
+      "updateBy": "jane_smith",
+      "owner": "jane_smith"
+    },
+    {
+      "_id": "user_003",
+      "username": "mike_wilson",
+      "email": "mike.wilson@example.com",
+      "phone": "+86-13700137000",
+      "password_hash": "hashed_password_345678",
+      "nickname": "Mike",
+      "avatar": "https://example.com/avatars/mike.jpg",
+      "real_name": "王五",
+      "bio": "数据科学家，专注于机器学习和数据分析",
+      "gender": "male",
+      "birthday": "1988-12-10",
+      "location": "深圳市南山区",
+      "website": "https://mikewilson.ai",
+      "email_verified": true,
+      "phone_verified": true,
+      "is_active": true,
+      "last_login": 1731212345678,
+      "login_count": 234,
+      "language": "en-US",
+      "timezone": "Asia/Shanghai",
+      "theme": "auto",
+      "notification_settings": {
+        "email_notifications": false,
+        "push_notifications": true,
+        "sms_notifications": true,
+        "marketing_emails": false
+      },
+      "privacy_settings": {
+        "profile_visibility": "private",
+        "show_email": false,
+        "show_phone": false,
+        "allow_messages": false
+      },
+      "social_links": [
+        {
+          "platform": "kaggle",
+          "url": "https://kaggle.com/mikewilson",
+          "username": "mikewilson"
+        },
+        {
+          "platform": "medium",
+          "url": "https://medium.com/@mikewilson",
+          "username": "@mikewilson"
+        }
+      ],
+      "skill_tags": ["Python", "TensorFlow", "PyTorch", "R", "SQL"],
+      "interests": ["机器学习", "数据科学", "量化交易", "开源"],
+      "user_level": 8,
+      "experience_points": 5600,
+      "reputation_score": 94,
+      "createdAt": 1672704000000,
+      "updatedAt": 1731212345678,
+      "createBy": "system",
+      "updateBy": "mike_wilson",
+      "owner": "mike_wilson"
+    }
+  ]
+  

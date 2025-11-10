@@ -1,0 +1,346 @@
+
+  [
+    {
+      "_id": "session_001",
+      "session_id": "session_001",
+      "title": "工作生活平衡分析",
+      "description": "分析用户的工作生活平衡状态，提供改善建议",
+      "session_type": "taiji_analysis",
+      "user_id": "user_001",
+      "ai_agent_id": "taiji_balance_agent",
+      "participants": [
+        {
+          "id": "user_001",
+          "type": "user",
+          "name": "John",
+          "role": "initiator",
+          "joined_at": 1731234567890
+        },
+        {
+          "id": "taiji_balance_agent",
+          "type": "ai_agent",
+          "name": "太极平衡分析师",
+          "role": "responder",
+          "joined_at": 1731234567890
+        }
+      ],
+      "status": "active",
+      "priority": 2,
+      "message_count": 12,
+      "last_message": {
+        "id": "msg_012",
+        "content": "根据分析结果，建议您每天保证7-8小时睡眠...",
+        "sender": "taiji_balance_agent",
+        "timestamp": 1731234567890,
+        "type": "text"
+      },
+      "last_activity": 1731234567890,
+      "duration": 1800,
+      "interaction_count": 6,
+      "context_data": {
+        "analysis_type": "taiji_balance",
+        "user_context": {
+          "work_stress": "high",
+          "sleep_quality": "poor",
+          "energy_level": "low"
+        },
+        "session_goals": [
+          "balance_assessment",
+          "recommendation_provision"
+        ]
+      },
+      "session_config": {
+        "language": "zh-CN",
+        "response_style": "professional",
+        "analysis_depth": "detailed",
+        "enable_followup": true
+      },
+      "tags": ["工作平衡", "压力管理", "生活调节"],
+      "category": "生活分析",
+      "is_archived": false,
+      "is_pinned": true,
+      "is_favorite": true,
+      "rating": 4,
+      "feedback": "分析很准确，建议很实用",
+      "related_analysis_ids": ["analysis_001"],
+      "attachment_count": 0,
+      "token_usage": {
+        "input_tokens": 1250,
+        "output_tokens": 890,
+        "total_tokens": 2140
+      },
+      "cost_info": {
+        "model_cost": 0.0214,
+        "total_cost": 0.0214,
+        "currency": "USD"
+      },
+      "error_count": 0,
+      "last_error": "",
+      "metadata": {
+        "device": "web",
+        "browser": "Chrome",
+        "ip_address": "192.168.1.100",
+        "user_agent": "Mozilla/5.0..."
+      },
+      "createdAt": 1672531200000,
+      "updatedAt": 1731234567890,
+      "createBy": "user_001",
+      "updateBy": "taiji_balance_agent",
+      "owner": "user_001"
+    },
+    {
+      "_id": "session_002",
+      "session_id": "session_002",
+      "title": "健康状态评估",
+      "description": "全面评估用户的身体健康状况",
+      "session_type": "health_analysis",
+      "user_id": "user_002",
+      "ai_agent_id": "taiji_health_agent",
+      "participants": [
+        {
+          "id": "user_002",
+          "type": "user",
+          "name": "Jane",
+          "role": "initiator",
+          "joined_at": 1731223456789
+        },
+        {
+          "id": "taiji_health_agent",
+          "type": "ai_agent",
+          "name": "太极健康顾问",
+          "role": "responder",
+          "joined_at": 1731223456789
+        }
+      ],
+      "status": "completed",
+      "priority": 1,
+      "message_count": 8,
+      "last_message": {
+        "id": "msg_008",
+        "content": "建议您进行全面的身体检查，调整作息时间...",
+        "sender": "taiji_health_agent",
+        "timestamp": 1731223456789,
+        "type": "text"
+      },
+      "last_activity": 1731223456789,
+      "duration": 1200,
+      "interaction_count": 4,
+      "context_data": {
+        "analysis_type": "health_assessment",
+        "symptoms": ["头痛", "失眠", "食欲不振"],
+        "session_goals": [
+          "symptom_analysis",
+          "health_recommendations"
+        ]
+      },
+      "session_config": {
+        "language": "zh-CN",
+        "response_style": "caring",
+        "analysis_depth": "comprehensive",
+        "enable_followup": true
+      },
+      "tags": ["健康评估", "亚健康", "身体调理"],
+      "category": "健康分析",
+      "is_archived": false,
+      "is_pinned": false,
+      "is_favorite": false,
+      "rating": 5,
+      "feedback": "很专业的健康建议，对我很有帮助",
+      "related_analysis_ids": ["analysis_002"],
+      "attachment_count": 2,
+      "token_usage": {
+        "input_tokens": 980,
+        "output_tokens": 650,
+        "total_tokens": 1630
+      },
+      "cost_info": {
+        "model_cost": 0.0163,
+        "total_cost": 0.0163,
+        "currency": "USD"
+      },
+      "error_count": 0,
+      "last_error": "",
+      "metadata": {
+        "device": "mobile",
+        "platform": "iOS",
+        "app_version": "2.1.0",
+        "location": "上海市"
+      },
+      "createdAt": 1672617600000,
+      "updatedAt": 1731223456789,
+      "createBy": "user_002",
+      "updateBy": "taiji_health_agent",
+      "owner": "user_002"
+    },
+    {
+      "_id": "session_003",
+      "session_id": "session_003",
+      "title": "职业发展规划",
+      "description": "为数据科学家制定职业发展路径",
+      "session_type": "career_analysis",
+      "user_id": "user_003",
+      "ai_agent_id": "taiji_career_agent",
+      "participants": [
+        {
+          "id": "user_003",
+          "type": "user",
+          "name": "Mike",
+          "role": "initiator",
+          "joined_at": 1731212345678
+        },
+        {
+          "id": "taiji_career_agent",
+          "type": "ai_agent",
+          "name": "太极职业规划师",
+          "role": "responder",
+          "joined_at": 1731212345678
+        }
+      ],
+      "status": "active",
+      "priority": 2,
+      "message_count": 15,
+      "last_message": {
+        "id": "msg_015",
+        "content": "基于您的技术背景，建议您制定3-5年职业规划...",
+        "sender": "taiji_career_agent",
+        "timestamp": 1731212345678,
+        "type": "text"
+      },
+      "last_activity": 1731212345678,
+      "duration": 2400,
+      "interaction_count": 8,
+      "context_data": {
+        "analysis_type": "career_development",
+        "current_position": "数据科学家",
+        "career_goals": ["技术提升", "管理转型", "创业准备"],
+        "session_goals": [
+          "skill_assessment",
+          "career_roadmap",
+          "action_plan"
+        ]
+      },
+      "session_config": {
+        "language": "en-US",
+        "response_style": "strategic",
+        "analysis_depth": "detailed",
+        "enable_followup": true
+      },
+      "tags": ["职业发展", "技术管理", "创业规划"],
+      "category": "职业分析",
+      "is_archived": false,
+      "is_pinned": true,
+      "is_favorite": true,
+      "rating": 5,
+      "feedback": "职业规划很详细，提供了很好的发展方向",
+      "related_analysis_ids": ["analysis_003"],
+      "attachment_count": 1,
+      "token_usage": {
+        "input_tokens": 1450,
+        "output_tokens": 980,
+        "total_tokens": 2430
+      },
+      "cost_info": {
+        "model_cost": 0.0243,
+        "total_cost": 0.0243,
+        "currency": "USD"
+      },
+      "error_count": 1,
+      "last_error": "Network timeout, recovered successfully",
+      "metadata": {
+        "device": "desktop",
+        "browser": "Firefox",
+        "ip_address": "192.168.1.102",
+        "user_agent": "Mozilla/5.0..."
+      },
+      "createdAt": 1672704000000,
+      "updatedAt": 1731212345678,
+      "createBy": "user_003",
+      "updateBy": "taiji_career_agent",
+      "owner": "user_003"
+    },
+    {
+      "_id": "session_004",
+      "session_id": "session_004",
+      "title": "日常咨询",
+      "description": "用户日常问题咨询和交流",
+      "session_type": "general_chat",
+      "user_id": "user_001",
+      "ai_agent_id": "taiji_general_agent",
+      "participants": [
+        {
+          "id": "user_001",
+          "type": "user",
+          "name": "John",
+          "role": "initiator",
+          "joined_at": 1731201234567
+        },
+        {
+          "id": "taiji_general_agent",
+          "type": "ai_agent",
+          "name": "太极智能助手",
+          "role": "responder",
+          "joined_at": 1731201234567
+        }
+      ],
+      "status": "paused",
+      "priority": 3,
+      "message_count": 6,
+      "last_message": {
+        "id": "msg_006",
+        "content": "有什么其他问题可以帮助您的吗？",
+        "sender": "taiji_general_agent",
+        "timestamp": 1731201234567,
+        "type": "text"
+      },
+      "last_activity": 1731201234567,
+      "duration": 600,
+      "interaction_count": 3,
+      "context_data": {
+        "analysis_type": "general_inquiry",
+        "topics": ["天气", "新闻", "一般知识"],
+        "session_goals": [
+          "information_provision",
+          "casual_conversation"
+        ]
+      },
+      "session_config": {
+        "language": "zh-CN",
+        "response_style": "friendly",
+        "analysis_depth": "basic",
+        "enable_followup": false
+      },
+      "tags": ["日常咨询", "闲聊"],
+      "category": "一般对话",
+      "is_archived": false,
+      "is_pinned": false,
+      "is_favorite": false,
+      "rating": 3,
+      "feedback": "",
+      "related_analysis_ids": [],
+      "attachment_count": 0,
+      "token_usage": {
+        "input_tokens": 320,
+        "output_tokens": 280,
+        "total_tokens": 600
+      },
+      "cost_info": {
+        "model_cost": 0.0060,
+        "total_cost": 0.0060,
+        "currency": "USD"
+      },
+      "error_count": 0,
+      "last_error": "",
+      "metadata": {
+        "device": "web",
+        "browser": "Safari",
+        "ip_address": "192.168.1.100",
+        "user_agent": "Mozilla/5.0..."
+      },
+      "createdAt": 1672790400000,
+      "updatedAt": 1731201234567,
+      "createBy": "user_001",
+      "updateBy": "user_001",
+      "owner": "user_001"
+    }
+  ]
+  

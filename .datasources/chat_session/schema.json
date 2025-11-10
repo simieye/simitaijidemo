@@ -1,0 +1,167 @@
+
+  {
+    "name": "chat_session",
+    "title": "会话管理",
+    "schemas": [
+      {
+        "name": "session_id",
+        "title": "会话ID",
+        "type": "String"
+      },
+      {
+        "name": "title",
+        "title": "会话标题",
+        "type": "String"
+      },
+      {
+        "name": "description",
+        "title": "会话描述",
+        "type": "MultiLineString"
+      },
+      {
+        "name": "session_type",
+        "title": "会话类型",
+        "type": "String"
+      },
+      {
+        "name": "user_id",
+        "title": "用户ID",
+        "type": "String"
+      },
+      {
+        "name": "ai_agent_id",
+        "title": "AI代理ID",
+        "type": "String"
+      },
+      {
+        "name": "participants",
+        "title": "参与者",
+        "type": "Array",
+        "items": {
+          "type": "Object"
+        }
+      },
+      {
+        "name": "status",
+        "title": "会话状态",
+        "type": "String"
+      },
+      {
+        "name": "priority",
+        "title": "优先级",
+        "type": "Number"
+      },
+      {
+        "name": "message_count",
+        "title": "消息数量",
+        "type": "Number"
+      },
+      {
+        "name": "last_message",
+        "title": "最后消息",
+        "type": "Object"
+      },
+      {
+        "name": "last_activity",
+        "title": "最后活动时间",
+        "type": "DateTime"
+      },
+      {
+        "name": "duration",
+        "title": "会话持续时间(秒)",
+        "type": "Number"
+      },
+      {
+        "name": "interaction_count",
+        "title": "交互次数",
+        "type": "Number"
+      },
+      {
+        "name": "context_data",
+        "title": "上下文数据",
+        "type": "Object"
+      },
+      {
+        "name": "session_config",
+        "title": "会话配置",
+        "type": "Object"
+      },
+      {
+        "name": "tags",
+        "title": "标签",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "category",
+        "title": "分类",
+        "type": "String"
+      },
+      {
+        "name": "is_archived",
+        "title": "是否归档",
+        "type": "Boolean"
+      },
+      {
+        "name": "is_pinned",
+        "title": "是否置顶",
+        "type": "Boolean"
+      },
+      {
+        "name": "is_favorite",
+        "title": "是否收藏",
+        "type": "Boolean"
+      },
+      {
+        "name": "rating",
+        "title": "会话评分",
+        "type": "Number"
+      },
+      {
+        "name": "feedback",
+        "title": "用户反馈",
+        "type": "MultiLineString"
+      },
+      {
+        "name": "related_analysis_ids",
+        "title": "相关分析ID",
+        "type": "Array",
+        "items": {
+          "type": "String"
+        }
+      },
+      {
+        "name": "attachment_count",
+        "title": "附件数量",
+        "type": "Number"
+      },
+      {
+        "name": "token_usage",
+        "title": "Token使用量",
+        "type": "Object"
+      },
+      {
+        "name": "cost_info",
+        "title": "费用信息",
+        "type": "Object"
+      },
+      {
+        "name": "error_count",
+        "title": "错误次数",
+        "type": "Number"
+      },
+      {
+        "name": "last_error",
+        "title": "最后错误",
+        "type": "String"
+      },
+      {
+        "name": "metadata",
+        "title": "元数据",
+        "type": "Object"
+      }
+    ]
+  }
+  
